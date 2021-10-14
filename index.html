@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!----- Website IconLogo---->
+<link rel="shortcut icon" type="x-icon" href="Images/backimage.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+
+
+
+<title>Caitlin's Cupcakes</title>
+  
+<!-- " StAuth10244: I Utsavkumar Patel, 000820474 certify that this material is my original work.
+                    No other person's work has been used without due acknowledgement.
+                    I have notmade my work available to anyone else."-------------------->
+
+  
+<!--References--
+
+https://www.westdalecupcakes.com/  
+https://www.w3schools.com/bootstrap5/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav 
+https://www.w3schools.com/bootstrap/bootstrap_images.asp
+https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
+
+-->
+
+
+<style>
+
+   /* General CSS */ 
+
+   * {box-sizing: border-box;}
+
+    body{
+        padding: 0;
+        margin: 0;
+        font-family:cursive;
+        font-size: 20px;
+    }
+    #tag{
+      background-image:url(images/neoncupcake.jpg);
+    }
+
+    h3{
+      text-align: center;
+      font-weight: bold;
+      color: rgb(8, 8, 10);
+    }
+    #btn{
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #pricecontainer{
+      border: 2px solid black;
+      display: block;
+      text-align: center;
+      grid-gap:10px;
+    }
+   
+
+    td{
+      text-align: center;
+      font-weight: bold;
+      border:1px solid grey;
+    }
+    #pricecontainer:h2{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      color:darkblue;
+    }
+
+    #hehe{
+      background-color: rgb(36, 30, 37);
+      color: whitesmoke;
+    }
+
+    li{
+       text-align: center;
+    }
+    h1{
+      color: rgb(86, 78, 160);
+    }
+    
+    
+
+
+  
+
+    
+  /*Responsive image css*/
+  .img-fluid{
+              max-width: 100%;
+              height: auto;
+          }
+
+/* Navigation Menu CSS*/  
+
+    .topnav{
+      background-color: rgb(161, 43, 146);
+      overflow: hidden;     /*TraditionalWay*/
+      align-items: center;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+
+
+    
+      
+/* Footer */
+
+    #copyright{
+        background-color: rgb(15, 17, 17);
+        border:2px solid green;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+    }
+ 
+
+    /* Media rules*/
+
+    @media screen and (max-width: 720px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      .topnav a{
+        border: 1px solid rgb(99, 175, 99);
+        color: rgb(28, 33, 77);
+        font-weight: bolder;
+
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      
+    }
+
+</style>
+</head>
+<body>
+ 
+
+<!-- Header Navigation Menu -------------------------------------------->    
+<header>
+
+ <!-- Hamburger Menu Effect using Bootstrap5--> 
+    
+  <img src="images/logo.jpg" class="img-fluid" alt="Responsive Image"/>
+
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#menuandprices">Menu and Prices</a>
+      <a href="#weddingandEvents">Wedding and Events</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact Us</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+</header>
+
+
+    <div class="container-fluid p-5 text-white text-center" id="tag">
+      <h1><span class="badge badge-secondary">New</span> SPECIAL OCCASIONS <span class="badge badge-secondary">New</span></h1>
+      <p>We would love to help you plan your next special event.
+        Be it a birthday, wedding, shower, anniversary, corporate event or just a special get together with friends and family cupcakes make any occasion more fun!
+        We have a variety of towers and trays available.
+        We also offer a wide assortment of cupcake toppers including: sugar toppers, picks, rings and sprinkles to customize your cupcakes.</p> 
+    </div>
+      
+<!-- Bootstrapt Grid stake to horizontal example with responsive Image/Bootstrap Icons-->    
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-sm-4" style="background-color:rgb(238, 144, 222);">
+            <h3>Birthdays </h3><br/>
+            <img src="Images/BdayCupCake.jpg" class="img-fluid" alt="Responsive Image">
+           <p><br/><i class="fas fa-heart"></i> We think birthdays are very special and we offer everything from our signiture birthday greeting box to elaborate tiered trays to mark those big milestones. 
+              Let us help you customize your next birthday cake!! <i class="fas fa-thumbs-up"></i></p>
+          </div>
+          <div class="col-sm-4" style="background-color:lightgreen;">
+            <h3>Favors  <i class="fas fa-coffee"></i></h3><br/>
+           
+           <img src="Images/favours.jpg" class="img-fluid" alt="Responsive Image">     
+            <p><br/> What's better than sending your guests home with a delicious little reminder of your event. We would be happy to work with you to customize party favors for your special event.</p>
+          </div>
+          <div class="col-sm-4" style="background-color:rgb(132, 132, 214)">
+            <h3>Weddings</h3><br/>
+            <img src="Images/weddingcupcakes.jpg" class="img-fluid" alt="Responsive Image">
+            <p><br/>Our specialty is creating cupcake towers for weddings. <i class="fas fa-heart"></i> Let us help you plan your special wedding cupcakes for your guests. We can customize special orders to meet your needs. We are available to deliver and set up if required in the Hamilton area for a small fee If you are picking up them up we will pack the cupcakes and wedding tray for travel.</p>
+          </div>
+          
+<!---BootStrap Dropdown button link----------------------------------------------------------------->
+          <div class="btn-group"><br/>
+            <button type="button" class="btn btn-success">Order Options:</button>
+            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Order Online</a></li>
+              <li><a class="dropdown-item" href="#">Curbside Pickup</a></li>
+              <li><a class="dropdown-item" href="#">Delivery</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Go to Order Page link:</a></li>
+            </ul>
+<!-----------------------Bootstrap Close Button-------------------------------------------------------------------->            
+            &nbsp;&nbsp;<button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <br/>
+      </div>
+
+      
+    </div>
+    <br/>
+<!---  Bootstrap Responsive Table -------->
+    
+    <div id="pricecontainer">
+       <h2 id="hehe">Cupcakes PriceList</h2>
+        <table class="table" table-bordered table-striped>
+              <thead>
+                  <tr class="info">
+                    <td>
+                        Number Of Cupcakes :
+                    </td>
+                    <td>
+                        Prices($) :
+                    </td>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td>
+                    1 Cupcake
+                  </td>
+                  <td>
+                    $3.95
+                  </td>
+                </tr>
+                <tr class="info">
+                  <td>
+                    3 Cupcakes
+                  </td>
+                  <td>
+                    $9.99
+                  </td>
+                  <tr class="success">
+                    <td>
+                      6 Cupcakes
+                    </td>
+                    <td>
+                      $20.95
+                    </td>
+                  <tr class="danger">
+                    <td>
+                      12 Cupcakes
+                    </td>
+                    <td>
+                      $38.95
+                    </td>
+                    <tr class="info">
+                      <td>
+                        12 Mini Cupcakes
+                      </td>
+                      <td>
+                        $20.95
+                      </td>
+                    </tr>
+                </tr>
+              </tr>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+<!-------------------Bootstrap Button-------------------------------------------------------------->
+    <div id="btn">
+      <button type="button" href="#" class="btn btn-primary btn-lg btn-block">CLICK HERE TO ORDER NOW..!!</button>
+     
+     
+    </div>
+    
+
+
+<footer>
+<!-----------------Bootstrap Height Utilities block------------>
+
+  <div class="container">
+    <h1>About Us: <span class="badge badge-secondary">Visit Again!</span></h1>
+    
+    
+    <div style="height:180px; background-color:rgba(235, 101, 206, 0.699)">
+     
+      <div class="h-100 d-inline-block p-2 bg-warning" style="height:500px; width: 650px;"><img src="images/logo.jpg" width="400" height="210" alt="OpenHouse logo"> </div>
+     
+    </div>
+  </div>
+  
+
+</footer>    
+<div id="copyright">
+  <p> <br/>   
+      Copyright © 2021 Caitlin's Cupcakes. All rights reserved.<br/>
+      Assignment#2 Part-B @Utsavkumar Patel (000820474)
+  </p>
+</div>
+
+
+<!-- Script Tag for function call -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>  
+
+</body>
+</html>
