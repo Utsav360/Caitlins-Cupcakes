@@ -1,2 +1,3 @@
 # Caitlins-Cupcakes
-Responsive web design using Bootstrap grid and Bootstrap Components
+
+Caitlins Cupcakes is an eCommerce site Responsive Layout built using Bootstrap grid, table, Images, and Bootstrap Components
